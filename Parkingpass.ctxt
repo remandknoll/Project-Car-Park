@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Parkingpass()
+comment1.params=
+comment1.target=void\ incrementParkingPass()
+comment2.params=
+comment2.target=int\ getAmountParkingPass()
+comment3.params=
+comment3.target=int\ getAmountNoParkingPass()
+comment4.params=
+comment4.target=void\ incrementNoParkingPass()
+numComments=5
