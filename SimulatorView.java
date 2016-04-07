@@ -1,8 +1,11 @@
 import javax.swing.*;
 import java.awt.*;
+<<<<<<< HEAD
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+=======
+>>>>>>> refs/remotes/origin/master
 /**
  * Description of the class SimulatorView
  * This Class generates the graphic view of the simulator
@@ -38,7 +41,11 @@ public class SimulatorView extends JFrame {
         //contentPane.add(population, BorderLayout.SOUTH);
         pack();
         setVisible(true);
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> refs/remotes/origin/master
         updateView();
     }
     

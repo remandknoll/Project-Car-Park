@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #BlueJ class context
 comment0.params=
 comment0.target=Simulator()
@@ -9,3 +10,13 @@ comment2.params=
 comment2.target=void\ tick()
 comment2.text=\r\n\ This\ is\ the\ tick\ method;\ calculates\ the\ times\ in\ minutes,\ hours\ and\ days\r\n
 numComments=3
+=======
+#BlueJ class context
+comment0.params=
+comment0.target=Simulator()
+comment1.params=
+comment1.target=void\ run()
+comment2.params=
+comment2.target=void\ tick()
+numComments=3
+>>>>>>> refs/remotes/origin/master
