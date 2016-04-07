@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 import javax.swing.*;
 import java.awt.*;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-=======
->>>>>>> refs/remotes/origin/master
 import java.util.Random;
 /**
  * Description of the class Location
@@ -33,7 +30,6 @@ public class Simulator {
     int enterSpeed = 3; // number of cars that can enter per minute
     int paymentSpeed = 10; // number of cars that can pay per minute
     int exitSpeed = 9; // number of cars that can leave per minute
-<<<<<<< HEAD
     int parkingPassProbability = 6;
     
     private Parkingpass parkingPass;
@@ -41,9 +37,6 @@ public class Simulator {
     private int totalMinutes;
     private GUI gui;
 
-=======
-    
->>>>>>> refs/remotes/origin/master
     /**
      * Constructor of the class: Simulator; creates the simulation
      */
@@ -52,7 +45,6 @@ public class Simulator {
         paymentCarQueue = new CarQueue();
         exitCarQueue = new CarQueue();
         simulatorView = new SimulatorView(3, 6, 30);
-<<<<<<< HEAD
         parkingPass = new Parkingpass();
         totalRevenue = 0;
         totalMinutes = 0;
@@ -60,17 +52,12 @@ public class Simulator {
         gui.openGUI();
     }
 
-=======
-    }
-    
->>>>>>> refs/remotes/origin/master
     /**
      * This is the run method; runs the simulation for a duration
      */
     public void run() {
         for (int i = 0; i < 10000; i++) {
             tick();
-<<<<<<< HEAD
             gui.textArea2.setText("Aantal auto's weggegaan met Parking Pass: " + Integer.toString(parkingPass.getAmountParkingPass()));
             gui.textArea4.setText("Aantal auto's weggegaan zonder Parking Pass: " + Integer.toString(parkingPass.getAmountNoParkingPass()));
             int totalMoney = totalRevenue / 100;
@@ -79,11 +66,6 @@ public class Simulator {
         }
     }
 
-=======
-        }
-    }
-    
->>>>>>> refs/remotes/origin/master
     /**
      * This is the tick method; calculates the times in minutes, hours and days
      */
@@ -106,13 +88,8 @@ public class Simulator {
 
         // Get the average number of cars that arrive per hour.
         int averageNumberOfCarsPerHour = day < 5
-<<<<<<< HEAD
             ? weekDayArrivals
             : weekendArrivals;
-=======
-                ? weekDayArrivals
-                : weekendArrivals;
->>>>>>> refs/remotes/origin/master
 
         // Calculate the number of cars that arrive this minute.
         double standardDeviation = averageNumberOfCarsPerHour * 0.1;
@@ -121,7 +98,6 @@ public class Simulator {
 
         // Add the cars to the back of the queue.
         for (int i = 0; i < numberOfCarsPerMinute; i++) {
-<<<<<<< HEAD
             int parkingPassChance = random.nextInt(parkingPassProbability);
             if(parkingPassChance == 0)
             {
@@ -133,10 +109,6 @@ public class Simulator {
                 entranceCarQueue.addCar(car);
             }
             
-=======
-            Car car = new AdHocCar();
-            entranceCarQueue.addCar(car);
->>>>>>> refs/remotes/origin/master
         }
 
         // Remove car from the front of the queue and assign to a parking space.
@@ -150,7 +122,6 @@ public class Simulator {
             if (freeLocation != null) {
                 simulatorView.setCarAt(freeLocation, car);
                 int stayMinutes = (int) (15 + random.nextFloat() * 10 * 60);
-<<<<<<< HEAD
                 if(car instanceof AdHocCar)
                 {
                     if(stayMinutes >= 400)
@@ -162,8 +133,6 @@ public class Simulator {
                         totalRevenue += stayMinutes * 5;
                     }
                 }
-=======
->>>>>>> refs/remotes/origin/master
                 car.setMinutesLeft(stayMinutes);
             }
         }
@@ -177,7 +146,6 @@ public class Simulator {
             if (car == null) {
                 break;
             }
-<<<<<<< HEAD
             
             if(car instanceof ParkingPassCar)
             {
@@ -189,10 +157,6 @@ public class Simulator {
                 parkingPass.incrementNoParkingPass();
             }
             car.setIsPaying(true);
-=======
-            car.setIsPaying(true);
-            paymentCarQueue.addCar(car);
->>>>>>> refs/remotes/origin/master
         }
 
         // Let cars pay.
@@ -225,8 +189,5 @@ public class Simulator {
             e.printStackTrace();
         }
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> refs/remotes/origin/master
 }

@@ -1,11 +1,6 @@
 /**
-<<<<<<< HEAD
  * Description of the class Car
  * This Class contains all details about a Car in progress.
-=======
- * Description of the class Car.
- * This Class contains all details about a Car in progress, which is nice.
->>>>>>> refs/remotes/origin/master
  * 
  * @author ProjectGroup of ITV1C (Jesse Tijsma, Dennis Vrieling, Mark Dissel, Remand Knol)
  * @version 0.1
